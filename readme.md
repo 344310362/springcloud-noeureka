@@ -1,5 +1,5 @@
 ### 去eureka的springcloud脚手架
-> springcloud 是一个生态健全的分布式开发框架，集合了网关/配置中心/注册中心/熔断器等，这些服务主要是java体系的服务，处于系统的异构型或者老系统的旧服务考虑，我们并不会整套都用springcloud系列，这个框架里就去除了spring 核心的 eureka，单独使用了部分服务。
+> springcloud 是一个生态健全的分布式开发框架，集合了网关/配置中心/注册中心/熔断器等，这些服务主要是java体系的服务，出于系统的异构型或者老系统的旧服务考虑，我们并不会整套都用springcloud系列，这个框架里就去除了spring 核心的 eureka，单独使用了部分服务。
 
 - 下文中约定别名
     - gateway-service-zuul as gateway
@@ -60,9 +60,11 @@ public interface HelloRemote {
 ```
 
 - consumer 正常 调用 provider
-![正常情况](./img/success.png)
+
+  ![正常情况](./img/success.png)
 - provider 关掉后访问
-![失败情况](./img/failure.png)
+
+  ![失败情况](./img/failure.png)
 
 #### 服务链路跟踪
 
@@ -71,7 +73,9 @@ public interface HelloRemote {
 zipkin ui http://localhost:8080/
 
 - 调用链
-![调用链](./img/调用链.png)
+
+  ![调用链](./img/调用链.png)
 
 - 关系图
-![关系图](./img/关系图.png)
+
+  ![关系图](./img/关系图.png)
