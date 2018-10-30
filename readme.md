@@ -1,5 +1,5 @@
 ### 去eureka的springcloud脚手架
-> springcloud 是一个生态健全的分布式开发框架，集合了网关/配置中心/注册中心/熔断器等，这些服务主要是java体系的服务，出于系统的异构型或者老系统的旧服务考虑，我们并不会整套都用springcloud系列，这个框架里就去除了spring 核心的 eureka，单独使用了部分服务。
+> springcloud 是一个生态健全的分布式开发框架，集合了网关/配置中心/注册中心/熔断器等，这些服务主要是java体系的服务，出于系统的异构型或者老系统的旧服务考虑，我们并不会整套都用springcloud系列，eureka是springcloud系统的核心，通过它将其它组建连接在一起。这个框架里就去除了eureka，单独使用了部分服务。
 
 - 下文中约定别名
     - gateway-service-zuul as gateway
