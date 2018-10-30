@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: spring-cloud-consumer-hystrix
+  zipkin:
+    base-url: http://localhost:8080
+    sleuth:
+      sampler:
+        percentage: 1.0
+server:
+  port: 9001
+feign:
+  hystrix:
+    enabled: true
+

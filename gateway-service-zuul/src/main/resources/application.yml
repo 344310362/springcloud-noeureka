@@ -1,0 +1,21 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: zuul
+  zipkin:
+    base-url: http://localhost:8080
+  sleuth:
+    sampler:
+      percentage: 1.0
+zuul:
+  routes:
+     hello:
+        path: /hello/**
+        url: http://localhost:9001/
+  #开启重试
+  retryable: true
+  #重试次数
+  MaxAutoRetries: 2
+  #
+  MaxAutoRetriesNextServer: 0
